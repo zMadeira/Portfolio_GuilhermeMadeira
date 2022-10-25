@@ -37,11 +37,16 @@ app.get('/addForm', addProjectHandlerForm);
 
 app.post('/add', addProjectHandler);
 
+
 app.listen(port, listenHandler);
 
 /* Função que gera o formulário para adição de um projeto*/
 function addProjectHandlerForm(req,res){
     res.render('adicionar_projeto_form.ejs'); 
+}
+
+function AboutHandler(req,res){
+    res.render('about.ejs'); 
 }
 
 /* Função que efetivamente adiciona um projeto. */

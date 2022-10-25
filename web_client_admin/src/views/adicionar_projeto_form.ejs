@@ -1,14 +1,35 @@
 <%# A linha abaixo carrega no template o conteúdo total do arquivo header.ejs%>
 <%-include('base_header') -%>
-<form action="add" method="post">
-        Título do projeto: <input name=titulo type="text" value="Título projeto"/><br/>
-        Tipo: <input type="text" name=tipo value="Tipo do projeto"/><br/>
-        Tecnologia: <input type="text" name=tecnologia value="Tecnologia"/><br/>
-        Inicio: <input type="text" name=inicio value="data início"/><br/>
-        Fim: <input type="text" name=fim value="data fim"/><br/>
-        <input type="submit" />        
-    </form>
- 
+<div class="container">
+    <div class="title">Projeto</div>
+    <form action="add" method="post">
+        <div class="project-details">
+        <div class="input-box">
+            <span class="details">Título do Projeto:</span>
+            <input name=titulo type="text" placeholder="Digite o título" required>
+        </div>
+        <div class="input-box">
+            <span class="details">Tipo:</span>
+            <input name=tipo type="text" placeholder="Digite o tipo do projeto" required>
+        </div>
+        <div class="input-box">
+            <span class="details">Tecnologias:</span>
+            <input name=tecnologia type="text" placeholder="Digite as tecnologias" required>
+        </div>
+        <div class="input-box">
+            <span class="details">Inicio do projeto:</span>
+            <input name=inicio type="date" placeholder="Digite a data início" required>
+        </div>
+        <div class="input-box">
+            <span class="details">Fim do projeto:</span>
+            <input name=fim type="date" placeholder="Digite a data final" required>
+        </div>
+        <div class="button">
+            <input type="submit">
+        </div>
+
+    </div>
+</div> 
 </body>
 <%# A linha abaixo carrega no template o conteúdo total do arquivo footer.ejs %>
 <%- include('base_footer') -%>

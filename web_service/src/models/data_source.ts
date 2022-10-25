@@ -8,7 +8,7 @@ export const MariaDBDataSource = new DataSource({
     port: 3306,
     username: "root",
     password: "root",
-    database: "web_orm_insert_ts",
+    database: "projetos_guilherme",
     synchronize: true,
     logging: false,
     entities: [Projeto],

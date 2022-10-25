@@ -1,3 +1,5 @@
+
+
 <%# A linha abaixo carrega no template o conteúdo total do arquivo header.ejs%>
 <%-include('base_header') -%>
     <ul>
@@ -9,9 +11,9 @@
             <span class="descritor">Início:</span> <%=lista_projetos[i].inicio %> <br/>
             <span class="descritor">Término:</span> <%=lista_projetos[i].fim %> 
             <span class="descritor">id:</span> <%=lista_projetos[i].id %> 
-        </li> 
+        </li>
     <% } %>
-    </ul>
+</ul>
 </body>
 <%# A linha abaixo carrega no template o conteúdo total do arquivo footer.ejs %>
 <%- include('base_footer') -%>
