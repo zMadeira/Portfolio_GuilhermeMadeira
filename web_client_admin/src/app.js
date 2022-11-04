@@ -31,22 +31,21 @@ app.use(bodyParser.urlencoded({extended: false}));
 /* Configurando o diretório que serve arquivos estáticos.*/
 app.use(express.static('src/public'));
 
-app.get('/', listProjectHandler);
+app.get('/projetos', listProjectHandler);
 
 app.get('/addForm', addProjectHandlerForm);
 
 app.post('/add', addProjectHandler);
 
-
 app.listen(port, listenHandler);
+
+app.get("/", (req, res) => {
+    res.render("about.ejs");
+  });
 
 /* Função que gera o formulário para adição de um projeto*/
 function addProjectHandlerForm(req,res){
     res.render('adicionar_projeto_form.ejs'); 
-}
-
-function AboutHandler(req,res){
-    res.render('about.ejs'); 
 }
 
 /* Função que efetivamente adiciona um projeto. */
